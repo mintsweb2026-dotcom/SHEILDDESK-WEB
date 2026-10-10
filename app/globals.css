@@ -262,7 +262,7 @@ body::after {
   letter-spacing: 0.08em;
   padding: 2px 9px;
   border-radius: var(--radius-full);
-  box-shadow: 0 0 10px rgba(212, 160, 64, 0.4);
+  box-shadow: 0 0 10px rgba(216, 196, 154, 0.4);
 }
 
 .announcement-link {
@@ -288,10 +288,10 @@ body::after {
   top: 0;
   width: 100%;
   height: var(--header-height);
-  background: rgba(11, 15, 23, 0.85);
+  background: rgba(7, 16, 13, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(212, 160, 64, 0.2);
+  border-bottom: 1px solid rgba(216, 196, 154, 0.2);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
   z-index: 100;
   display: flex;
@@ -324,13 +324,13 @@ body::after {
   width: 42px;
   height: 42px;
   border-radius: var(--radius-md);
-  background: radial-gradient(circle at 50% 30%, rgba(212, 160, 64, 0.16), rgba(16, 185, 129, 0.08) 70%, transparent);
-  border: 1px solid rgba(212, 160, 64, 0.35);
+  background: radial-gradient(circle at 50% 30%, rgba(216, 196, 154, 0.16), rgba(11, 107, 80, 0.08) 70%, transparent);
+  border: 1px solid rgba(216, 196, 154, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--accent-gold-bright);
-  box-shadow: 0 0 16px rgba(212, 160, 64, 0.22);
+  box-shadow: 0 0 16px rgba(216, 196, 154, 0.22);
   transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
   overflow: hidden;
   padding: 3px;
@@ -347,8 +347,8 @@ body::after {
 
 .brand-logo:hover .brand-icon-wrapper {
   transform: translateY(-1px) scale(1.06);
-  border-color: rgba(212, 160, 64, 0.65);
-  box-shadow: 0 0 28px rgba(212, 160, 64, 0.45), 0 0 14px rgba(16, 185, 129, 0.3);
+  border-color: rgba(216, 196, 154, 0.65);
+  box-shadow: 0 0 28px rgba(216, 196, 154, 0.45), 0 0 14px rgba(11, 107, 80, 0.3);
 }
 
 .brand-logo:hover .brand-icon-img {
@@ -719,10 +719,10 @@ body::after {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  background: rgba(11, 15, 23, 0.85);
+  background: rgba(7, 16, 13, 0.85);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(212, 160, 64, 0.28);
+  border: 1px solid rgba(216, 196, 154, 0.28);
   border-radius: var(--radius-lg);
   padding: 8px 16px;
   font-family: var(--font-mono);
@@ -737,8 +737,8 @@ body::after {
 }
 
 .quick-install-box:hover {
-  border-color: rgba(212, 160, 64, 0.55);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 20px rgba(16, 185, 129, 0.2);
+  border-color: rgba(216, 196, 154, 0.55);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 20px rgba(11, 107, 80, 0.2);
 }
 
 .terminal-dots {
@@ -796,7 +796,7 @@ body::after {
 
 .cli-copy-btn:hover {
   color: var(--accent-gold-bright);
-  border-color: rgba(212, 160, 64, 0.4);
+  border-color: rgba(216, 196, 154, 0.4);
   background: var(--accent-gold-bg);
 }
 
@@ -814,10 +814,10 @@ body::after {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
-  background: rgba(11, 15, 23, 0.72);
+  background: rgba(7, 16, 13, 0.72);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(212, 160, 64, 0.22);
+  border: 1px solid rgba(216, 196, 154, 0.22);
   border-radius: var(--radius-xl);
   padding: 16px 24px;
   max-width: 980px;
@@ -851,7 +851,7 @@ body::after {
 .trust-item svg {
   color: var(--accent-gold-bright);
   flex-shrink: 0;
-  filter: drop-shadow(0 0 8px rgba(212, 160, 64, 0.4));
+  filter: drop-shadow(0 0 8px rgba(216, 196, 154, 0.4));
 }
 
 @media (max-width: 900px) {
@@ -984,7 +984,7 @@ body::after {
   position: absolute;
   inset: 0;
   border-radius: var(--radius-xl);
-  background: radial-gradient(circle at 50% 0%, rgba(212, 160, 64, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle at 50% 0%, rgba(216, 196, 154, 0.08) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -1144,7 +1144,7 @@ body::after {
 /* Showcase Content Body */
 .showcase-viewport {
   position: relative;
-  background: #08090b;
+  background: #07100D;
   min-height: 540px;
   display: flex;
   align-items: center;
@@ -1213,7 +1213,7 @@ body::after {
 .zoom-btn:hover {
   background: var(--gradient-gold-btn);
   color: #0e0b04;
-  border-color: #f0ba54;
+  border-color: #D8C49A;
 }
 
 /* ===================================================================
@@ -1272,10 +1272,10 @@ body::after {
   gap: 14px;
   padding: 16px 20px;
   border-radius: var(--radius-lg);
-  background: rgba(11, 15, 23, 0.68);
+  background: rgba(7, 16, 13, 0.68);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(212, 160, 64, 0.18);
+  border: 1px solid rgba(216, 196, 154, 0.18);
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.28);
   transition: all var(--transition-base);
   cursor: default;
@@ -1283,7 +1283,7 @@ body::after {
 
 .partner-logo-item:hover {
   color: var(--text-primary);
-  border-color: rgba(212, 160, 64, 0.48);
+  border-color: rgba(216, 196, 154, 0.48);
   background: rgba(17, 24, 39, 0.88);
   transform: translateY(-2px);
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45), 0 0 16px rgba(11, 107, 80, 0.18);
@@ -1294,7 +1294,7 @@ body::after {
   height: 22px;
   color: var(--accent-gold-bright);
   flex-shrink: 0;
-  filter: drop-shadow(0 0 6px rgba(212, 160, 64, 0.3));
+  filter: drop-shadow(0 0 6px rgba(216, 196, 154, 0.3));
 }
 
 .partner-item-info {
@@ -1526,7 +1526,7 @@ body::after {
 
 /* Sandbox Output Box (Dark Terminal with Warm Gold Font Highlights) */
 .sandbox-output-box {
-  background: #08090b;
+  background: #07100D;
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
   padding: 20px;
@@ -1543,7 +1543,7 @@ body::after {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(212, 160, 64, 0.12);
+  border-bottom: 1px solid rgba(216, 196, 154, 0.12);
   padding-bottom: 10px;
   margin-bottom: 12px;
   font-size: 11px;
@@ -1954,7 +1954,7 @@ body::after {
   border-radius: 50%;
   background: var(--accent-gold);
   cursor: pointer;
-  box-shadow: 0 0 12px rgba(212, 160, 64, 0.6);
+  box-shadow: 0 0 12px rgba(216, 196, 154, 0.6);
   transition: transform var(--transition-fast);
 }
 
