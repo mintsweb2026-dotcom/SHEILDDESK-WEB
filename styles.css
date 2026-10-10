@@ -287,62 +287,80 @@ body::after {
 .navbar {
   position: sticky;
   top: 14px;
-  width: min(1240px, calc(100% - 32px));
-  margin: 12px auto 0 auto;
-  height: 64px;
-  background: radial-gradient(130% 120% at 50% -20%, rgba(216, 196, 154, 0.09) 0%, rgba(11, 107, 80, 0.16) 40%, rgba(7, 16, 13, 0.82) 100%);
+  width: min(1260px, calc(100% - 32px));
+  margin: 10px auto 0 auto;
+  height: 60px;
+  background: rgba(7, 16, 13, 0.72);
   backdrop-filter: blur(28px) saturate(210%);
   -webkit-backdrop-filter: blur(28px) saturate(210%);
-  border: 1px solid rgba(216, 196, 154, 0.22);
-  border-top: 1px solid rgba(255, 255, 255, 0.28);
-  border-bottom: 1px solid rgba(11, 107, 80, 0.35);
+  border: 1px solid rgba(216, 196, 154, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.32);
+  border-bottom: 1px solid rgba(11, 107, 80, 0.42);
   border-radius: var(--radius-full);
   box-shadow: 
     0 20px 48px -12px rgba(0, 0, 0, 0.85),
     0 0 24px -4px rgba(11, 107, 80, 0.22),
-    inset 0 1px 1px 0 rgba(255, 255, 255, 0.25),
-    inset 0 -1px 2px 0 rgba(11, 107, 80, 0.3);
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.32),
+    inset 0 -1px 2px 0 rgba(0, 0, 0, 0.6);
   z-index: 1000;
   display: flex;
   align-items: center;
+  padding: 0 6px;
   transition: all var(--transition-smooth);
 }
 
+.navbar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.02) 40%,
+    transparent 65%,
+    rgba(11, 107, 80, 0.08) 100%
+  );
+  pointer-events: none;
+}
+
 .navbar:hover {
-  border-color: rgba(216, 196, 154, 0.38);
-  border-top-color: rgba(255, 255, 255, 0.38);
+  border-color: rgba(216, 196, 154, 0.35);
+  border-top-color: rgba(255, 255, 255, 0.45);
   box-shadow: 
-    0 24px 56px -10px rgba(0, 0, 0, 0.9),
+    0 24px 56px -10px rgba(0, 0, 0, 0.92),
     0 0 32px -2px rgba(11, 107, 80, 0.35),
-    inset 0 1px 2px 0 rgba(255, 255, 255, 0.32),
-    inset 0 -1px 3px 0 rgba(11, 107, 80, 0.4);
+    inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.45),
+    inset 0 -1px 2px 0 rgba(0, 0, 0, 0.65);
 }
 
 .nav-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: 12px;
   width: 100%;
   padding: 0 10px;
+  position: relative;
+  z-index: 1;
 }
 
 .brand-logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   text-decoration: none;
   color: var(--text-primary);
   font-family: var(--font-display);
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 800;
   letter-spacing: -0.02em;
   flex-shrink: 0;
 }
 
 .brand-icon-wrapper {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   border-radius: var(--radius-full);
   background: radial-gradient(circle at 40% 30%, rgba(216, 196, 154, 0.22), rgba(11, 107, 80, 0.16) 70%, transparent);
   border: 1px solid rgba(216, 196, 154, 0.35);
@@ -351,7 +369,7 @@ body::after {
   justify-content: center;
   color: var(--accent-gold-bright);
   box-shadow: 
-    0 0 14px rgba(11, 107, 80, 0.25),
+    0 0 12px rgba(11, 107, 80, 0.25),
     inset 0 1px 1px rgba(255, 255, 255, 0.25);
   transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
   overflow: hidden;
@@ -363,14 +381,14 @@ body::after {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.6));
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6));
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .brand-logo:hover .brand-icon-wrapper {
-  transform: translateY(-1px) scale(1.06);
+  transform: translateY(-1px) scale(1.05);
   border-color: rgba(216, 196, 154, 0.65);
-  box-shadow: 0 0 28px rgba(216, 196, 154, 0.45), 0 0 14px rgba(11, 107, 80, 0.3);
+  box-shadow: 0 0 24px rgba(216, 196, 154, 0.4), 0 0 14px rgba(11, 107, 80, 0.3);
 }
 
 .brand-logo:hover .brand-icon-img {
@@ -380,11 +398,11 @@ body::after {
 .brand-name {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 3px;
 }
 
 .brand-tm {
-  font-size: 11px;
+  font-size: 10px;
   color: var(--accent-gold);
   font-weight: 700;
   vertical-align: super;
@@ -393,8 +411,8 @@ body::after {
 .brand-version-badge {
   display: inline-flex;
   align-items: center;
-  padding: 3px 10px;
-  font-size: 10px;
+  padding: 2px 8px;
+  font-size: 9.5px;
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -403,16 +421,20 @@ body::after {
   backdrop-filter: blur(8px);
   color: var(--accent-gold-bright);
   border: 1px solid rgba(216, 196, 154, 0.24);
-  margin-left: 6px;
+  margin-left: 4px;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  white-space: nowrap;
 }
 
 /* Nav Links with Liquid Capsule Hover */
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 3px;
   list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 1;
 }
 
 .nav-item {
@@ -421,26 +443,29 @@ body::after {
 
 .nav-link {
   color: var(--text-secondary);
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 600;
   text-decoration: none;
-  padding: 7px 14px;
+  padding: 6px 11px;
   border-radius: var(--radius-full);
   transition: all var(--transition-fast);
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
+  white-space: nowrap !important;
+  border: 1px solid transparent;
 }
 
 .nav-link:hover, .nav-link.active {
-  color: #ede0c4;
+  color: #f5eedf;
   background: rgba(216, 196, 154, 0.1);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  border-color: rgba(216, 196, 154, 0.2);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18), 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .nav-link svg.chevron {
-  width: 14px;
-  height: 14px;
+  width: 13px;
+  height: 13px;
   transition: transform var(--transition-fast);
 }
 
@@ -519,7 +544,8 @@ body::after {
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
+  flex-shrink: 0;
 }
 
 /* Buttons (Matching Screenshot Gold Buttons) */
@@ -540,8 +566,8 @@ body::after {
 }
 
 .btn-sm {
-  padding: 7px 16px;
-  font-size: 13px;
+  padding: 6px 14px;
+  font-size: 12.5px;
   border-radius: var(--radius-full);
 }
 
@@ -550,22 +576,39 @@ body::after {
 }
 
 .nav-actions .btn-secondary {
-  background: rgba(12, 24, 19, 0.65);
+  background: rgba(14, 28, 22, 0.6);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(216, 196, 154, 0.25);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(216, 196, 154, 0.22);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  color: var(--text-primary);
+  font-size: 12.5px;
+  padding: 6px 14px;
 }
 
 .nav-actions .btn-secondary:hover {
-  background: rgba(17, 34, 27, 0.85);
-  border-color: rgba(216, 196, 154, 0.5);
-  box-shadow: 0 0 18px rgba(11, 107, 80, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  background: rgba(20, 38, 30, 0.85);
+  border-color: rgba(216, 196, 154, 0.45);
+  color: var(--accent-gold-bright);
+  box-shadow: 0 0 16px rgba(11, 107, 80, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .nav-actions .btn-primary {
-  box-shadow: 0 0 20px rgba(11, 107, 80, 0.55), inset 0 1px 1px rgba(255, 255, 255, 0.35);
-  border-color: rgba(216, 196, 154, 0.6);
+  background: linear-gradient(135deg, #0d7f5f 0%, #0B6B50 60%, #084c39 100%);
+  border: 1px solid rgba(216, 196, 154, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 16px rgba(11, 107, 80, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.38);
+  color: #ffffff;
+  font-size: 12.5px;
+  padding: 6px 16px;
+  margin-right: 4px;
+}
+
+.nav-actions .btn-primary:hover {
+  background: linear-gradient(135deg, #109b74 0%, #0d7f5f 60%, #0B6B50 100%);
+  border-color: var(--accent-gold);
+  box-shadow: 0 6px 24px rgba(11, 107, 80, 0.65), 0 0 14px rgba(216, 196, 154, 0.35), inset 0 1px 1.5px rgba(255, 255, 255, 0.5);
 }
 
 .btn-lg {
@@ -643,29 +686,35 @@ body::after {
 .github-star-pill {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  padding: 6px 12px;
+  gap: 6px;
+  background: rgba(14, 28, 22, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+  padding: 5px 10px;
   border-radius: var(--radius-full);
   color: var(--text-secondary);
-  font-size: 13px;
+  font-size: 12px;
   text-decoration: none;
   font-weight: 600;
   transition: all var(--transition-fast);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  white-space: nowrap;
 }
 
 .github-star-pill:hover {
-  border-color: var(--border-focus);
+  border-color: rgba(216, 196, 154, 0.45);
   color: var(--text-primary);
+  box-shadow: 0 0 14px rgba(216, 196, 154, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .star-count {
   background: var(--accent-gold-bg);
   color: var(--accent-gold-bright);
-  padding: 1px 7px;
+  padding: 1px 6px;
   border-radius: var(--radius-full);
-  font-size: 11px;
+  font-size: 10.5px;
   font-weight: 700;
   border: 1px solid var(--border-subtle);
 }
@@ -2604,18 +2653,42 @@ input:checked + .slider-toggle:before {
   color: var(--accent-gold-bright);
 }
 
+@media (max-width: 1200px) {
+  .brand-version-badge {
+    display: none;
+  }
+}
+
+@media (max-width: 1100px) {
+  .github-star-pill {
+    display: none;
+  }
+}
+
+@media (max-width: 960px) {
+  .nav-hide-mobile {
+    display: none !important;
+  }
+}
+
 /* Mobile Nav Menu Drawer (Liquid Glass Sheet) */
 @media (max-width: 860px) {
   .navbar {
     width: calc(100% - 20px);
     top: 10px;
-    height: 58px;
+    height: 56px;
     border-radius: var(--radius-full);
-    padding: 0 6px;
+    padding: 0 4px;
+  }
+  .nav-container {
+    padding: 0 8px;
+  }
+  .nav-actions .btn-primary {
+    margin-right: 0;
   }
   .nav-menu {
     position: fixed;
-    top: 76px;
+    top: 74px;
     left: 10px;
     right: 10px;
     width: auto;
@@ -2629,9 +2702,14 @@ input:checked + .slider-toggle:before {
     gap: 12px;
     box-shadow: 0 24px 60px rgba(0, 0, 0, 0.9);
     display: none;
+    flex-direction: column;
+    align-items: stretch;
   }
   .nav-menu.open {
     display: flex;
+  }
+  .nav-link {
+    padding: 10px 14px;
   }
   .mobile-toggle {
     display: flex;
