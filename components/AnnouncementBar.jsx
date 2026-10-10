@@ -1,9 +1,9 @@
 export default function AnnouncementBar() {
   return (
     <aside className="announcement-bar" aria-label="Announcement">
-      <span className="announcement-tag">v2.4 GA</span>
+      <span className="announcement-tag">v2.4</span>
       <span>
-        <strong>See Risk. Act With Confidence.</strong> &bull; Cryptographic Dual-Custody & Merkle Audit Ledger now live.
+        Dual-custody approvals and the Merkle audit ledger are now generally available.
       </span>
       <a
         href="https://github.com/Mints-ai/SHIELD-DESK"

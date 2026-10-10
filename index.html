@@ -24,6 +24,7 @@
 
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="refine.css">
 </head>
 <body>
 
@@ -655,11 +656,11 @@
                       Tier 0
                     </span>
                   </td>
-                  <td><strong>Observation Only</strong></td>
-                  <td>Autonomous read & telemetry visualization</td>
-                  <td><strong>0</strong> (Fully Autonomous)</td>
-                  <td>System Daemon</td>
-                  <td>Attack surface mapping, CVSS calculation, blast radius simulation</td>
+                  <td data-label="Classification"><strong>Observation Only</strong></td>
+                  <td data-label="Execution policy">Autonomous read & telemetry visualization</td>
+                  <td data-label="Required sign-off"><strong>0</strong> (Fully Autonomous)</td>
+                  <td data-label="Eligible approvers">System Daemon</td>
+                  <td data-label="Example actions">Attack surface mapping, CVSS calculation, blast radius simulation</td>
                 </tr>
                 <tr>
                   <td>
@@ -668,11 +669,11 @@
                       Tier 1
                     </span>
                   </td>
-                  <td><strong>Low-Risk / Reversible</strong></td>
-                  <td>Pre-flight snapshot + rate-throttled dispatch</td>
-                  <td><strong>1 Approver</strong> (Self-approval allowed)</td>
-                  <td><code>system_admin</code>, <code>super_admin</code>, <code>responder</code></td>
-                  <td>Revoke user sessions, block outbound domain, blacklist IP on gateway</td>
+                  <td data-label="Classification"><strong>Low-Risk / Reversible</strong></td>
+                  <td data-label="Execution policy">Pre-flight snapshot + rate-throttled dispatch</td>
+                  <td data-label="Required sign-off"><strong>1 Approver</strong> (Self-approval allowed)</td>
+                  <td data-label="Eligible approvers"><code>system_admin</code>, <code>super_admin</code>, <code>responder</code></td>
+                  <td data-label="Example actions">Revoke user sessions, block outbound domain, blacklist IP on gateway</td>
                 </tr>
                 <tr>
                   <td>
@@ -681,11 +682,11 @@
                       Tier 2
                     </span>
                   </td>
-                  <td><strong>Containment / Isolation</strong></td>
-                  <td>Human Sign-Off Required + RFC 6238 TOTP MFA</td>
-                  <td><strong>1 Approver</strong> (Fast Containment)</td>
-                  <td><code>system_admin</code>, <code>super_admin</code>, <code>responder</code></td>
-                  <td>Quarantine endpoint NIC, isolate database host, deploy OS patch</td>
+                  <td data-label="Classification"><strong>Containment / Isolation</strong></td>
+                  <td data-label="Execution policy">Human Sign-Off Required + RFC 6238 TOTP MFA</td>
+                  <td data-label="Required sign-off"><strong>1 Approver</strong> (Fast Containment)</td>
+                  <td data-label="Eligible approvers"><code>system_admin</code>, <code>super_admin</code>, <code>responder</code></td>
+                  <td data-label="Example actions">Quarantine endpoint NIC, isolate database host, deploy OS patch</td>
                 </tr>
                 <tr>
                   <td>
@@ -694,11 +695,11 @@
                       Tier 3
                     </span>
                   </td>
-                  <td><strong>Break-Glass / Destructive</strong></td>
-                  <td>Dual Named SuperAdmin + Strict SoD + Mandatory MFA</td>
-                  <td><strong>2 Distinct Admins</strong> (No self-approval)</td>
-                  <td>Dual <code>super_admin</code> or <code>system_admin</code></td>
-                  <td>Fleet-wide credential rotation, kernel patch reboot, firewall wipe</td>
+                  <td data-label="Classification"><strong>Break-Glass / Destructive</strong></td>
+                  <td data-label="Execution policy">Dual Named SuperAdmin + Strict SoD + Mandatory MFA</td>
+                  <td data-label="Required sign-off"><strong>2 Distinct Admins</strong> (No self-approval)</td>
+                  <td data-label="Eligible approvers">Dual <code>super_admin</code> or <code>system_admin</code></td>
+                  <td data-label="Example actions">Fleet-wide credential rotation, kernel patch reboot, firewall wipe</td>
                 </tr>
               </tbody>
             </table>

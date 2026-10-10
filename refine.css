@@ -1,0 +1,302 @@
+/* ===================================================================
+   SHIELDDESK - EDITORIAL REFINEMENT LAYER
+   Loaded after globals.css / styles.css (Next app and static page).
+   Palette unchanged: #07100D / #0B6B50 / #D8C49A.
+   Goal: remove template tells (glow orbs, dot grid, gradient text,
+   pill badges on every section, diamond dividers, lifting cards)
+   and fix responsive defects found in the audit.
+   =================================================================== */
+
+/* ---------- 1. Flat atmosphere: no orbs, no dot grid ---------- */
+.bg-grid-overlay,
+.ambient-glow,
+.top-scroll-vignette,
+.showcase-glow-backdrop,
+.section-divider-container,
+body::before,
+body::after {
+  display: none !important;
+}
+
+/* ---------- 2. Typography: Orbitron only for brand moments ---------- */
+.hero-title,
+.metric-banner-value,
+.result-stat,
+.price-amount {
+  font-family: var(--font-brand);
+}
+
+.hero-title {
+  font-weight: 700;
+  font-size: clamp(36px, 5vw, 62px);
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+}
+
+.hero-title .gradient-text {
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-text-fill-color: currentColor;
+  color: var(--accent-gold);
+  filter: none;
+}
+
+.section-title {
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  font-size: clamp(28px, 3.2vw, 42px);
+  text-wrap: balance;
+}
+
+.partner-heading {
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+/* ---------- 3. Editorial section headers (left aligned, no pills) ---------- */
+.section-header,
+.partner-header-wrapper {
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 760px;
+}
+
+.section-eyebrow,
+.partner-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+}
+
+.section-eyebrow::before,
+.partner-eyebrow::before {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: var(--accent-gold);
+  opacity: 0.7;
+}
+
+.section-desc,
+.partner-subheading {
+  max-width: 620px;
+}
+
+.pricing-toggle-wrapper {
+  justify-content: flex-start;
+}
+
+/* Sections are separated by one hairline instead of ornaments */
+main > section + section {
+  border-top: 1px solid var(--border-subtle);
+}
+
+.partner-section,
+.pricing-section {
+  border-top: 0;
+  border-bottom: 0;
+}
+
+/* ---------- 4. Hero and announcement: quieter ---------- */
+.hero-badge-wrapper {
+  background: none;
+  border: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.pulse-dot,
+.telemetry-pulse-dot {
+  display: none;
+}
+
+.hero-badge-text {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: var(--accent-gold);
+}
+
+.announcement-tag {
+  background: none;
+  box-shadow: none;
+  color: var(--accent-gold);
+  padding: 0;
+  border-radius: 0;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+/* ---------- 5. Buttons and cards: flat, no glow, no lift ---------- */
+.btn-primary {
+  background: var(--color-primary);
+  box-shadow: none;
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-light);
+  box-shadow: none;
+  transform: none;
+}
+
+.btn-secondary:hover,
+.btn-gold:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.partner-logo-item,
+.feature-card,
+.pricing-card,
+.quick-install-box {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
+}
+
+.partner-logo-item:hover,
+.feature-card:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: var(--border-focus);
+}
+
+.partner-logo-item svg {
+  filter: none;
+}
+
+.pricing-card.popular {
+  box-shadow: none;
+  transform: none;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: 18px;
+}
+
+.feature-badge {
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+/* ---------- 6. Governance table: readable headers ---------- */
+.gov-table th {
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+/* ---------- 7. Responsive fixes from the audit ---------- */
+@media (max-width: 760px) {
+  /* Announcement bar: drop the tag, tighten text so nothing overlaps */
+  .announcement-tag {
+    display: none;
+  }
+  .announcement-bar {
+    flex-wrap: wrap;
+    font-size: 12px;
+    padding: 8px 14px;
+    line-height: 1.4;
+  }
+
+  /* Showcase: scrollable single-row tabs, no clipped window chrome */
+  .showcase-tab-bar {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .window-dots {
+    flex-shrink: 0;
+  }
+  .window-address {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+  }
+  .window-address span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .window-actions {
+    display: none;
+  }
+
+  /* Keep screenshot text legible: pan instead of shrinking to micro-text */
+  .showcase-image-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .showcase-img {
+    min-width: 760px;
+  }
+  .showcase-caption-dock {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Governance table becomes stacked cards */
+  .gov-table {
+    min-width: 0;
+  }
+  .gov-table thead {
+    display: none;
+  }
+  .gov-table,
+  .gov-table tbody,
+  .gov-table tr,
+  .gov-table td {
+    display: block;
+    width: 100%;
+  }
+  .gov-table tr {
+    padding: 16px 18px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .gov-table tr:last-child {
+    border-bottom: 0;
+  }
+  .gov-table td {
+    padding: 6px 0;
+    border: 0;
+  }
+  .gov-table td::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 2px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .gov-table td:first-child::before {
+    display: none;
+  }
+}

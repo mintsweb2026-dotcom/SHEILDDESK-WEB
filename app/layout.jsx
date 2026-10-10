@@ -1,4 +1,5 @@
 import './globals.css';
+import '../refine.css';
 
 export const metadata = {
   metadataBase: new URL('https://shielddesk.io'),

@@ -15,10 +15,9 @@ export default function HeroSection() {
     <section className="hero-section" id="hero">
       <div className="container">
         
-        {/* Live Posture Badge */}
+        {/* Product context line */}
         <div className="hero-badge-wrapper">
-          <span className="pulse-dot"></span>
-          <span className="hero-badge-text">SEE RISK. ACT WITH CONFIDENCE. &bull; CYBER POSTURE INDEX 94.8 &bull; SHIELDDESK CONSOLE</span>
+          <span className="hero-badge-text">Security operations console &bull; Cyber Posture Index 94.8</span>
         </div>
 
         {/* Grand Title */}

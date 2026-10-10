@@ -10,7 +10,6 @@ import RoiCalculator from '../components/RoiCalculator';
 import PricingSection from '../components/PricingSection';
 import FaqSection from '../components/FaqSection';
 import Footer from '../components/Footer';
-import DiamondDivider from '../components/DiamondDivider';
 
 // Force dynamic Server-Side Rendering (SSR) on every request
 export const dynamic = 'force-dynamic';
@@ -34,7 +33,6 @@ export default async function HomePage() {
         {/* Hero Section */}
         <HeroSection />
 
-        <DiamondDivider />
 
         {/* Product Showcase Tabs (Chatwoot style + Mints ERP window frame) */}
         <ShowcaseTabs />
@@ -139,37 +137,30 @@ export default async function HomePage() {
           </div>
         </section>
 
-        <DiamondDivider />
 
         {/* Interactive Incident Simulator (Live Sandbox) */}
         <IncidentSimulator />
 
-        <DiamondDivider />
 
         {/* Core Architectural Pillars / Bento Grid */}
         <FeatureGrid />
 
-        <DiamondDivider />
 
         {/* Autonomy Tiers & Governance Hierarchy Table */}
         <GovernanceMatrix />
 
-        <DiamondDivider />
 
         {/* 3-Horizon Remediation Framework */}
         <HorizonCards />
 
-        <DiamondDivider />
 
         {/* Interactive ROI & Breach Cost Prevention Calculator */}
         <RoiCalculator />
 
-        <DiamondDivider />
 
         {/* Transparent Pricing Section */}
         <PricingSection />
 
-        <DiamondDivider />
 
         {/* Frequently Asked Questions */}
         <FaqSection />
