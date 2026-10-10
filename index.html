@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShieldDesk™ — Evidence-Driven Security Operations & Remediation Platform | Mints Global</title>
+  <meta name="description" content="ShieldDesk is an evidence-driven security operations and remediation control plane engineered around the unyielding invariant: PROVE BEFORE YOU ACT. Ingest multi-cloud telemetry, model attack blast radius, enforce cryptographic dual-custody governance, and dispatch signed endpoint containment with automated rollback.">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="ShieldDesk™ — Evidence-Driven Security Operations & Remediation Platform">
+  <meta property="og:description" content="Prove Before You Act. Autonomous multi-cloud security telemetry correlation, AI blast radius modeling, dual-custody separation of duties, and RSA-2048 signed fleet dispatch.">
+  <meta property="og:image" content="assets/screenshots/soc-incident-workspace.png">
+  <meta property="og:type" content="website">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Inter & JetBrains Mono (Mints ERP Font Stack) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Mints ERP Ambient Grid & Glow Backgrounds -->
+  <div class="bg-grid-overlay"></div>
+  <div class="ambient-glow"></div>
+
+  <!-- ===================================================================
+       TOP ANNOUNCEMENT BANNER (Mints ERP Style with Chatwoot Flow)
+       =================================================================== -->
+  <aside class="announcement-bar" aria-label="Announcement">
+    <span class="announcement-tag">Release v2.0</span>
+    <span><strong>SOC 2 Remediation, Merkle Audit Ledger & Dual-Custody Approval</strong> now live across ShieldDesk.</span>
+    <a href="https://github.com/Mints-ai/SHIELD-DESK" target="_blank" rel="noopener noreferrer" class="announcement-link">
+      <span>See repository</span>
+      <span aria-hidden="true">&rarr;</span>
+    </a>
+  </aside>
+
+  <!-- ===================================================================
+       STICKY NAVBAR (Chatwoot Layout + Mints ERP Palette)
+       =================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="brand-logo" aria-label="ShieldDesk Home">
+        <div class="brand-icon-wrapper">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="M9 12l2 2 4-4" stroke-width="2.5"/>
+          </svg>
+        </div>
+        <div class="brand-name">
+          <span>ShieldDesk</span><span class="brand-tm">™</span>
+        </div>
+        <span class="brand-version-badge">v2.4 Enterprise</span>
+      </a>
+
+      <!-- Desktop Nav Menu (Chatwoot Product Navigation) -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item">
+            <a href="#showcase" class="nav-link">
+              Product
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </a>
+            <div class="dropdown-menu">
+              <a href="#showcase" class="dropdown-link" data-tab-trigger="soc">
+                <div class="dropdown-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                </div>
+                <div class="dropdown-text">
+                  <h4>SOC Incident Workspace</h4>
+                  <p>Real-time telemetry correlation & triage</p>
+                </div>
+              </a>
+              <a href="#showcase" class="dropdown-link" data-tab-trigger="fleet">
+                <div class="dropdown-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+                </div>
+                <div class="dropdown-text">
+                  <h4>Fleet & Endpoint PKI</h4>
+                  <p>mTLS X.509 universal Go daemon</p>
+                </div>
+              </a>
+              <a href="#showcase" class="dropdown-link" data-tab-trigger="remediation">
+                <div class="dropdown-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                </div>
+                <div class="dropdown-text">
+                  <h4>3-Horizon Remediation</h4>
+                  <p>Immediate containment & zero-trust hardening</p>
+                </div>
+              </a>
+              <a href="#showcase" class="dropdown-link" data-tab-trigger="threat-intel">
+                <div class="dropdown-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/></svg>
+                </div>
+                <div class="dropdown-text">
+                  <h4>Native YARA Engine</h4>
+                  <p>AST parser, compiler & streaming monitors</p>
+                </div>
+              </a>
+              <a href="#showcase" class="dropdown-link" data-tab-trigger="compliance">
+                <div class="dropdown-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div class="dropdown-text">
+                  <h4>Compliance Audit Vault</h4>
+                  <p>SOC 2 Type II, ISO 27001 & Merkle Ledger</p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="#simulator" class="nav-link">Live Simulator</a></li>
+          <li class="nav-item"><a href="#governance" class="nav-link">Governance & Tiers</a></li>
+          <li class="nav-item"><a href="#horizons" class="nav-link">3 Horizons</a></li>
+          <li class="nav-item"><a href="#pricing" class="nav-link">Pricing</a></li>
+          <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- Theme Toggle (Mints ERP Forest Dark / Sage Light) -->
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Forest Dark and Sage Light" title="Toggle Theme">
+          <svg id="themeIcon" width="18" height="18" viewBox="0 0 24 24" fill="none"></svg>
+        </button>
+
+        <!-- GitHub Pill -->
+        <a href="https://github.com/Mints-ai/SHIELD-DESK" target="_blank" rel="noopener noreferrer" class="github-star-pill" title="View Source on GitHub">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+          <span>Star</span>
+          <span class="star-count">350+ Tests</span>
+        </a>
+
+        <!-- CTA Buttons -->
+        <a href="#pricing" class="btn btn-secondary btn-sm">Sign In</a>
+        <a href="#simulator" class="btn btn-primary btn-sm">Request a Demo</a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================================================================
+         HERO SECTION (Mints ERP Layout + Chatwoot Developer Flow)
+         =================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        
+        <!-- Live Posture Badge (Mints ERP Badge Style) -->
+        <div class="hero-badge-wrapper">
+          <span class="pulse-dot"></span>
+          <span class="hero-badge-text">PROVE BEFORE YOU ACT &bull; CYBER POSTURE INDEX 94.8 &bull; DUAL-THEME ENGINE</span>
+        </div>
+
+        <!-- Grand Title -->
+        <h1 class="hero-title">
+          One Command Center for<br>
+          <span class="gradient-text">Autonomous Security Operations.</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="hero-subtitle">
+          Ingest multi-cloud telemetry, model attack blast radius, enforce cryptographic dual-custody governance, and dispatch signed endpoint containment with automated rollback.
+        </p>
+
+        <!-- Hero CTAs -->
+        <div class="hero-actions">
+          <a href="#simulator" class="btn btn-primary btn-lg">
+            Request a Live Demo
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#showcase" class="btn btn-secondary btn-lg">
+            Explore Features
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2V12M7 12L3 8M7 12L11 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+
+        <!-- Quick Install Terminal Snippet -->
+        <div class="quick-install-box">
+          <span class="cli-prompt">$</span>
+          <code class="cli-code">curl -sSL https://get.shielddesk.io | bash</code>
+          <button class="cli-copy-btn copy-trigger" data-copy-text="curl -sSL https://get.shielddesk.io | bash" title="Copy to clipboard">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          </button>
+        </div>
+
+        <!-- Trust Metric Strip -->
+        <div class="trust-metric-strip">
+          <div class="trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>350+ Passed Test Suites</span>
+          </div>
+          <div class="trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>mTLS X.509 Cryptographic PKI</span>
+          </div>
+          <div class="trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+            <span>&lt; 120ms Ingestion Normalization</span>
+          </div>
+          <div class="trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            <span>SOC 2 Type II & Merkle Ledger</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Mints ERP Diamond Hairline Divider -->
+    <div class="diamond-divider">
+      <div class="gold-hairline"></div>
+      <div class="diamond-icon"></div>
+      <div class="gold-hairline"></div>
+    </div>
+
+    <!-- ===================================================================
+         PRODUCT SHOWCASE TABS (Chatwoot style + Mints ERP window frame)
+         =================================================================== -->
+    <section class="showcase-section" id="showcase">
+      <div class="container">
+        
+        <div class="showcase-wrapper">
+          
+          <!-- Top Horizontal Tab Bar -->
+          <div class="showcase-tab-bar" role="tablist">
+            <button class="showcase-tab-btn active" data-tab="soc" role="tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+              <span>1. SOC Workspace</span>
+            </button>
+            <button class="showcase-tab-btn" data-tab="scorecard" role="tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+              <span>2. Executive Risk</span>
+            </button>
+            <button class="showcase-tab-btn" data-tab="fleet" role="tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/></svg>
+              <span>3. Fleet & PKI</span>
+            </button>
+            <button class="showcase-tab-btn" data-tab="remediation" role="tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              <span>4. Remediation Plans</span>
+            </button>
+            <button class="showcase-tab-btn" data-tab="threat-intel" role="tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/></svg>
+              <span>5. YARA Engine</span>
+            </button>
+            <button class="showcase-tab-btn" data-tab="compliance" role="tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>6. Compliance Vault</span>
+            </button>
+            <button class="showcase-tab-btn" data-tab="vulnerability" role="tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="22" y1="12" x2="18" y2="12"/><line x1="6" y1="12" x2="2" y2="12"/></svg>
+              <span>7. Trivy & Secrets</span>
+            </button>
+            <button class="showcase-tab-btn" data-tab="onboarding" role="tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+              <span>8. Onboarding</span>
+            </button>
+          </div>
+
+          <!-- Window Bar (Mints ERP Mac Traffic Light Bar) -->
+          <div class="showcase-header">
+            <div class="window-dots">
+              <div class="window-dot red"></div>
+              <div class="window-dot yellow"></div>
+              <div class="window-dot green"></div>
+            </div>
+            <div class="window-address">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <span id="showcaseAddress">https://app.shielddesk.io/dashboard/incidents/INC-8094</span>
+            </div>
+            <div class="window-actions">
+              <span class="window-action-badge" id="showcaseBadge">Live SOC Ingestion</span>
+            </div>
+          </div>
+
+          <!-- Showcase Viewport -->
+          <div class="showcase-viewport">
+            <div class="showcase-image-container">
+              <img id="showcaseMainImg" class="showcase-img" src="assets/screenshots/soc-incident-workspace.png" alt="ShieldDesk Security Operations Workspace">
+              
+              <!-- Caption Overlay -->
+              <div class="showcase-caption-overlay">
+                <div class="caption-content">
+                  <h3 id="showcaseTitle">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--accent-cyan)"><polyline points="20 6 9 17 4 12"/></svg>
+                    Security Operations & Incident Workspace
+                  </h3>
+                  <p id="showcaseDesc">Real-time incident triage console featuring live telemetry correlation (CrowdStrike Falcon, Microsoft Defender, Wazuh), severity classification, attack timeline visualization, and autonomous AI copilot investigation trigger.</p>
+                </div>
+                <button class="zoom-btn" id="zoomShowcaseBtn" title="Inspect Full Screen">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  <span>Zoom Full View</span>
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         PARTNERS & INGESTION ECOSYSTEM (Mints ERP Pill Style)
+         =================================================================== -->
+    <section class="partner-section">
+      <div class="container">
+        <h2 class="partner-heading">Native Bi-Directional Telemetry & Vulnerability Integrations</h2>
+        <div class="partner-grid">
+          
+          <div class="partner-logo-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            <span>CrowdStrike Falcon</span>
+          </div>
+
+          <div class="partner-logo-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="8" height="8"/><rect x="13" y="3" width="8" height="8"/><rect x="3" y="13" width="8" height="8"/><rect x="13" y="13" width="8" height="8"/></svg>
+            <span>Microsoft Defender</span>
+          </div>
+
+          <div class="partner-logo-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
+            <span>Wazuh SIEM</span>
+          </div>
+
+          <div class="partner-logo-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+            <span>Aqua Trivy v0.74</span>
+          </div>
+
+          <div class="partner-logo-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <span>Gitleaks v8.30</span>
+          </div>
+
+          <div class="partner-logo-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            <span>Supabase Cloud</span>
+          </div>
+
+          <div class="partner-logo-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            <span>PostgreSQL 16+</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Mints ERP Diamond Hairline Divider -->
+    <div class="diamond-divider">
+      <div class="gold-hairline"></div>
+      <div class="diamond-icon"></div>
+      <div class="gold-hairline"></div>
+    </div>
+
+    <!-- ===================================================================
+         INTERACTIVE INCIDENT SIMULATOR (Live Sandbox)
+         =================================================================== -->
+    <section class="simulator-section" id="simulator">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-eyebrow">Interactive Live Playground</span>
+          <h2 class="section-title">Experience the "Prove Before You Act" Engine</h2>
+          <p class="section-desc">
+            Test how ShieldDesk intercepts enterprise security telemetry, automatically scrubs credentials with regex patterns, evaluates blast radius, enforces separation of duties, and executes signed mTLS containment.
+          </p>
+        </div>
+
+        <div class="sandbox-card">
+          
+          <!-- Sandbox Sidebar (Scenario Selection) -->
+          <div class="sandbox-sidebar">
+            <div class="sandbox-sidebar-title">Select Attack Scenario</div>
+            <div class="scenario-list">
+              
+              <button class="scenario-btn active" data-scenario="ransomware">
+                <div class="scenario-btn-top">
+                  <span class="scenario-title">Ransomware Stager</span>
+                  <span class="scenario-severity severity-critical">Critical</span>
+                </div>
+                <p class="scenario-desc">CrowdStrike beaconing on db-cluster-04 with attempted VSS purge.</p>
+              </button>
+
+              <button class="scenario-btn" data-scenario="credential">
+                <div class="scenario-btn-top">
+                  <span class="scenario-title">Bastion Credential Leak</span>
+                  <span class="scenario-severity severity-high">High</span>
+                </div>
+                <p class="scenario-desc">Gitleaks private key commit followed by abnormal SSH spikes.</p>
+              </button>
+
+              <button class="scenario-btn" data-scenario="zero-day">
+                <div class="scenario-btn-top">
+                  <span class="scenario-title">Kernel Escalation Zero-Day</span>
+                  <span class="scenario-severity severity-critical">Break-Glass</span>
+                </div>
+                <p class="scenario-desc">Wazuh SIEM detected root exploit payload on 8 core fleet nodes.</p>
+              </button>
+
+            </div>
+
+            <!-- Invariant Highlight Box (Mints ERP Style) -->
+            <div style="background:var(--bg-secondary); border:1px solid var(--border-subtle); border-radius:var(--radius-md); padding:16px;">
+              <div style="font-size:11px; font-weight:800; color:var(--accent-cyan); text-transform:uppercase; margin-bottom:4px;">Core System Invariant</div>
+              <div style="font-size:12px; color:var(--text-secondary); line-height:1.4;">
+                No remediation command ever executes on an endpoint without a cryptographically verified RSA-2048 dual-custody token.
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Sandbox Main Console -->
+          <div class="sandbox-main">
+            
+            <!-- Pipeline Steps -->
+            <div class="pipeline-stepper">
+              <div class="pipe-step active" id="step1">
+                <div class="pipe-step-num">Step 01 <span>Ingest</span></div>
+                <div class="pipe-step-title">Secret Redaction</div>
+              </div>
+              <div class="pipe-step" id="step2">
+                <div class="pipe-step-num">Step 02 <span>ML Model</span></div>
+                <div class="pipe-step-title">AI Blast Radius</div>
+              </div>
+              <div class="pipe-step" id="step3">
+                <div class="pipe-step-num">Step 03 <span>Governance</span></div>
+                <div class="pipe-step-title">Dual-Custody MFA</div>
+              </div>
+              <div class="pipe-step" id="step4">
+                <div class="pipe-step-num">Step 04 <span>Dispatch</span></div>
+                <div class="pipe-step-title">RSA-2048 Signed</div>
+              </div>
+            </div>
+
+            <!-- Terminal Output Box -->
+            <div class="sandbox-output-box">
+              <div class="output-header">
+                <span>SHIELDDESK SECURITY DAEMON &bull; CONTROL PLANE TELEMETRY STREAM</span>
+                <span id="sandboxStatusBadge" class="action-status-badge">
+                  <span class="pulse-dot"></span> Ingesting Telemetry
+                </span>
+              </div>
+              
+              <div class="output-code-lines" id="sandboxConsoleOutput">
+                <!-- Dynamically rendered by script.js -->
+              </div>
+            </div>
+
+            <!-- Interactive Step Controls -->
+            <div class="sandbox-controls">
+              <button class="btn btn-primary" id="simNextStepBtn">
+                Execute AI Blast Radius & Investigation &rarr;
+              </button>
+              <button class="btn btn-secondary btn-sm" id="simResetBtn">
+                Reset Simulator
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Mints ERP Diamond Hairline Divider -->
+    <div class="diamond-divider">
+      <div class="gold-hairline"></div>
+      <div class="diamond-icon"></div>
+      <div class="gold-hairline"></div>
+    </div>
+
+    <!-- ===================================================================
+         CORE ARCHITECTURAL PILLARS (Bento Grid in Mints ERP Theme)
+         =================================================================== -->
+    <section class="features-section" id="features">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-eyebrow">Platform Capabilities</span>
+          <h2 class="section-title">Engineered For Zero Tolerance & Zero Drift</h2>
+          <p class="section-desc">
+            Traditional SOAR tools fail when automated playbooks hallucinate or disrupt production. ShieldDesk replaces brittle scripts with cryptographic verification, separation of duties, and instant state rollback.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          
+          <!-- Feature 1: Alert Normalization -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            </div>
+            <h3 class="feature-title">Telemetry Ingestion & Secret Redaction</h3>
+            <p class="feature-desc">
+              Ingests raw webhooks from CrowdStrike, Defender, and Wazuh through a centralized regex redactor (<code>redactor.ts</code>). Credentials, private keys, and PII are scrubbed prior to storage.
+            </p>
+            <div class="feature-badge-list">
+              <span class="feature-badge">HMAC-SHA256 Ingestion</span>
+              <span class="feature-badge">Zero PII Leakage</span>
+              <span class="feature-badge">Tenant Binding</span>
+            </div>
+          </div>
+
+          <!-- Feature 2: AI Blast Radius -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            </div>
+            <h3 class="feature-title">AI & Blast Radius Simulation</h3>
+            <p class="feature-desc">
+              Deterministic Python ML Engine evaluates CVE vectors, computes EPSS exploitation probabilities, models downstream asset dependencies, and simulates attack posture before touching endpoints.
+            </p>
+            <div class="feature-badge-list">
+              <span class="feature-badge">Port 8000 ML Engine</span>
+              <span class="feature-badge">EPSS & CVSS Scoring</span>
+              <span class="feature-badge">Attack Graph Tree</span>
+            </div>
+          </div>
+
+          <!-- Feature 3: 3-Horizon Remediation -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
+            </div>
+            <h3 class="feature-title">3-Horizon Structured Mitigation</h3>
+            <p class="feature-desc">
+              Organizes remediation into Horizon 1 (Immediate Containment), Horizon 2 (Short-Term Patching), and Horizon 3 (Zero-Trust Hardening) with database-persisted task pipelines.
+            </p>
+            <div class="feature-badge-list">
+              <span class="feature-badge">Immediate Isolation</span>
+              <span class="feature-badge">Automated Patching</span>
+              <span class="feature-badge">Zero-Trust Hardening</span>
+            </div>
+          </div>
+
+          <!-- Feature 4: 4-Tier Separation of Duties -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="feature-title">4-Tier Governance & Separation of Duties</h3>
+            <p class="feature-desc">
+              Enforced at the SQL constraint level. Tier 1 & 2 permit fast admin self-approval to eliminate incident deadlocks, while Tier 3 destructive tasks mandate dual named SuperAdmins and RFC 6238 TOTP MFA.
+            </p>
+            <div class="feature-badge-list">
+              <span class="feature-badge">SQL check_separation</span>
+              <span class="feature-badge">Analyst Zero-Write</span>
+              <span class="feature-badge">Dual SuperAdmin Sign-Off</span>
+            </div>
+          </div>
+
+          <!-- Feature 5: Signed Fleet Dispatch -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+            </div>
+            <h3 class="feature-title">Cryptographic Fleet Dispatch & PKI</h3>
+            <p class="feature-desc">
+              Universal Go agent for Windows and Linux. Dispatched commands are canonically signed with RSA-2048 keys, governed by emergency kill-switches and a 5-host/5-min blast throttle.
+            </p>
+            <div class="feature-badge-list">
+              <span class="feature-badge">RSA-SHA256 Signing</span>
+              <span class="feature-badge">Kill-Switch Gate</span>
+              <span class="feature-badge">LVM Pre-flight Snapshot</span>
+            </div>
+          </div>
+
+          <!-- Feature 6: Merkle Ledger -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><circle cx="12" cy="14" r="2"/></svg>
+            </div>
+            <h3 class="feature-title">Merkle Hash Audit & Continuous Compliance</h3>
+            <p class="feature-desc">
+              Every action, sign-off, and state change produces an immutable SHA-256 Merkle hash chain. Map evidence seamlessly to SOC 2 Type II, ISO 27001, NIST CSF 2.0, HIPAA, and PCI-DSS.
+            </p>
+            <div class="feature-badge-list">
+              <span class="feature-badge">Tamper-Proof Audit</span>
+              <span class="feature-badge">SOC 2 Type II Ready</span>
+              <span class="feature-badge">Immutable Chain</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Mints ERP Diamond Hairline Divider -->
+    <div class="diamond-divider">
+      <div class="gold-hairline"></div>
+      <div class="diamond-icon"></div>
+      <div class="gold-hairline"></div>
+    </div>
+
+    <!-- ===================================================================
+         AUTONOMY TIERS & GOVERNANCE HIERARCHY TABLE
+         =================================================================== -->
+    <section class="governance-section" id="governance">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-eyebrow">Cryptographic Governance</span>
+          <h2 class="section-title">Strict 4-Tier Autonomy & Permission Hierarchy</h2>
+          <p class="section-desc">
+            ShieldDesk enforces strict mathematical boundaries between read-only observability and endpoint modification.
+          </p>
+        </div>
+
+        <div class="governance-table-card">
+          <div class="table-responsive">
+            <table class="gov-table">
+              <thead>
+                <tr>
+                  <th>Autonomy Tier</th>
+                  <th>Classification</th>
+                  <th>Execution Policy</th>
+                  <th>Required Sign-Off</th>
+                  <th>Eligible Approvers</th>
+                  <th>Example Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <span class="tier-pill tier-0">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/></svg>
+                      Tier 0
+                    </span>
+                  </td>
+                  <td><strong>Observation Only</strong></td>
+                  <td>Autonomous read & telemetry visualization</td>
+                  <td><strong>0</strong> (Fully Autonomous)</td>
+                  <td>System Daemon</td>
+                  <td>Attack surface mapping, CVSS calculation, blast radius simulation</td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="tier-pill tier-1">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      Tier 1
+                    </span>
+                  </td>
+                  <td><strong>Low-Risk / Reversible</strong></td>
+                  <td>Pre-flight snapshot + rate-throttled dispatch</td>
+                  <td><strong>1 Approver</strong> (Self-approval allowed)</td>
+                  <td><code>system_admin</code>, <code>super_admin</code>, <code>responder</code></td>
+                  <td>Revoke user sessions, block outbound domain, blacklist IP on gateway</td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="tier-pill tier-2">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                      Tier 2
+                    </span>
+                  </td>
+                  <td><strong>Containment / Isolation</strong></td>
+                  <td>Human Sign-Off Required + RFC 6238 TOTP MFA</td>
+                  <td><strong>1 Approver</strong> (Fast Containment)</td>
+                  <td><code>system_admin</code>, <code>super_admin</code>, <code>responder</code></td>
+                  <td>Quarantine endpoint NIC, isolate database host, deploy OS patch</td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="tier-pill tier-3">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"/></svg>
+                      Tier 3
+                    </span>
+                  </td>
+                  <td><strong>Break-Glass / Destructive</strong></td>
+                  <td>Dual Named SuperAdmin + Strict SoD + Mandatory MFA</td>
+                  <td><strong>2 Distinct Admins</strong> (No self-approval)</td>
+                  <td>Dual <code>super_admin</code> or <code>system_admin</code></td>
+                  <td>Fleet-wide credential rotation, kernel patch reboot, firewall wipe</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Separation of duties rule callout -->
+        <div class="sod-callout">
+          <div class="sod-content">
+            <h4>Database-Enforced Separation of Duties Invariant</h4>
+            <p>
+              Constraint <code>check_separation_of_duties</code> ensures that for Tier 3 destructive actions, requester cannot approve their own request, and two distinct administrators must independently sign off with hardware tokens. Analysts maintain <strong>strict zero write or sign-off authority</strong>.
+            </p>
+          </div>
+          <a href="https://github.com/Mints-ai/SHIELD-DESK/blob/main/db/schema.sql" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+            View db/schema.sql &rarr;
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Mints ERP Diamond Hairline Divider -->
+    <div class="diamond-divider">
+      <div class="gold-hairline"></div>
+      <div class="diamond-icon"></div>
+      <div class="gold-hairline"></div>
+    </div>
+
+    <!-- ===================================================================
+         3-HORIZON REMEDIATION WORKFLOW
+         =================================================================== -->
+    <section class="horizon-section" id="horizons">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-eyebrow">Incident Response Lifecycle</span>
+          <h2 class="section-title">The 3-Horizon Remediation Framework</h2>
+          <p class="section-desc">
+            ShieldDesk structures containment into three clear operational horizons to prevent both immediate data exfiltration and long-term recurrence.
+          </p>
+        </div>
+
+        <div class="horizon-grid">
+          
+          <!-- Horizon 1 -->
+          <div class="horizon-card h1">
+            <span class="horizon-tag">Horizon 1 &bull; Minutes</span>
+            <h3 class="horizon-title">Immediate Containment</h3>
+            <p class="horizon-desc">
+              Immediate cryptographic severance of adversary access vectors. Eliminates command-and-control communication while preserving volatile forensic memory.
+            </p>
+            <ul class="horizon-tasks">
+              <li class="horizon-task-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Quarantine host network interfaces & flush ARP tables</span>
+              </li>
+              <li class="horizon-task-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Invalidate all active OAuth session tokens and cookies</span>
+              </li>
+              <li class="horizon-task-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Trigger pre-flight LVM snapshot before executing isolation</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Horizon 2 -->
+          <div class="horizon-card h2">
+            <span class="horizon-tag">Horizon 2 &bull; Hours</span>
+            <h3 class="horizon-title">Short-Term Patching</h3>
+            <p class="horizon-desc">
+              Rapid remediation of root-cause vulnerabilities identified by Trivy CVE scans and ML exploitation probability predictions.
+            </p>
+            <ul class="horizon-tasks">
+              <li class="horizon-task-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Apply verified vendor security packages across fleet</span>
+              </li>
+              <li class="horizon-task-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Quarantine suspicious payload binaries and DLL drops</span>
+              </li>
+              <li class="horizon-task-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Rotate compromised service account tokens and secrets</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Horizon 3 -->
+          <div class="horizon-card h3">
+            <span class="horizon-tag">Horizon 3 &bull; Days / Weeks</span>
+            <h3 class="horizon-title">Long-Term Zero Trust</h3>
+            <p class="horizon-desc">
+              Permanent architectural hardening to structurally eliminate the entire attack class and satisfy continuous regulatory compliance matrices.
+            </p>
+            <ul class="horizon-tasks">
+              <li class="horizon-task-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Deploy microsegmentation firewall rules across cloud VPCs</span>
+              </li>
+              <li class="horizon-task-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Implement strict mTLS X.509 certificate authentication</span>
+              </li>
+              <li class="horizon-task-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Anchor incident remediation proof to Merkle audit vault</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Mints ERP Diamond Hairline Divider -->
+    <div class="diamond-divider">
+      <div class="gold-hairline"></div>
+      <div class="diamond-icon"></div>
+      <div class="gold-hairline"></div>
+    </div>
+
+    <!-- ===================================================================
+         INTERACTIVE ROI & BREACH PREVENTION CALCULATOR
+         =================================================================== -->
+    <section class="calculator-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-eyebrow">Enterprise Value Impact</span>
+          <h2 class="section-title">Calculate Your Incident Response ROI</h2>
+          <p class="section-desc">
+            See how automating alert triage and enforcing cryptographically safe containment reduces MTTR and prevents multimillion-dollar security incidents.
+          </p>
+        </div>
+
+        <div class="calculator-card">
+          
+          <!-- Sliders -->
+          <div class="calc-sliders">
+            <div class="slider-group">
+              <div class="slider-label-row">
+                <span>Protected Enterprise Endpoints & Cloud Hosts</span>
+                <span class="slider-value-display" id="endpointsVal">250</span>
+              </div>
+              <input type="range" min="10" max="5000" step="10" value="250" class="custom-range" id="sliderEndpoints" aria-label="Endpoint volume">
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-label-row">
+                <span>Average Security Alerts & Incidents Per Month</span>
+                <span class="slider-value-display" id="incidentsVal">35</span>
+              </div>
+              <input type="range" min="5" max="300" step="5" value="35" class="custom-range" id="sliderIncidents" aria-label="Incident volume">
+            </div>
+
+            <div style="font-size:12px; color:var(--text-muted); line-height:1.5;">
+              * Calculations benchmarked from 350+ automated security simulation test suites and enterprise SOC averages (average manual MTTR: 4.5 hours; average analyst cost: $85/hr).
+            </div>
+          </div>
+
+          <!-- Results Box -->
+          <div class="calc-results">
+            <div>
+              <div class="result-row">
+                <span class="result-title">Monthly Analyst Hours Reclaimed</span>
+                <span class="result-stat" id="calcHoursSaved">147 hrs/mo</span>
+              </div>
+
+              <div class="result-row">
+                <span class="result-title">Estimated Annual Breach Cost Avoidance</span>
+                <span class="result-stat savings" id="calcBreachCost">$192,000</span>
+              </div>
+            </div>
+
+            <div class="calc-breakdown">
+              <div class="breakdown-box">
+                <h5>MTTR Reduction</h5>
+                <p id="calcMttrReduction">78%</p>
+              </div>
+              <div class="breakdown-box">
+                <h5>Average Containment Speed</h5>
+                <p id="calcMttrTime">12 min (vs 4.5h)</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Mints ERP Diamond Hairline Divider -->
+    <div class="diamond-divider">
+      <div class="gold-hairline"></div>
+      <div class="diamond-icon"></div>
+      <div class="gold-hairline"></div>
+    </div>
+
+    <!-- ===================================================================
+         PRICING SECTION (Chatwoot Structure + Mints ERP Cards)
+         =================================================================== -->
+    <section class="pricing-section" id="pricing">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-eyebrow">Transparent Pricing</span>
+          <h2 class="section-title">Security Operations For Any Scale</h2>
+          <p class="section-desc">
+            Start free with full open source self-hosting, or deploy our managed enterprise cloud with dedicated PKI authority and dual-custody approval.
+          </p>
+        </div>
+
+        <!-- Monthly / Annual Toggle -->
+        <div class="pricing-toggle-wrapper">
+          <span class="pricing-toggle-label">Billed Monthly</span>
+          <label class="toggle-switch" aria-label="Toggle Monthly and Annual billing">
+            <input type="checkbox" id="billingToggle" checked>
+            <span class="slider-toggle"></span>
+          </label>
+          <span class="pricing-toggle-label">Billed Annually</span>
+          <span class="save-badge">Save 20%</span>
+        </div>
+
+        <!-- Pricing Cards Grid -->
+        <div class="pricing-cards-grid">
+          
+          <!-- Community Tier -->
+          <div class="pricing-card">
+            <h3 class="pricing-tier-name">Community</h3>
+            <p class="pricing-tier-desc">Open-source self-hosted edition for developers, homelabs, and small security teams.</p>
+            <div class="pricing-price-box">
+              <span class="price-currency">$</span>
+              <span class="price-amount">0</span>
+              <span class="price-period">/ forever</span>
+            </div>
+            <ul class="pricing-features-list">
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Up to <strong>5 Endpoint Agents</strong></span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Full SOC Incident Workspace</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>CrowdStrike, Defender & Wazuh Ingest</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Native YARA Engine & Scanner</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Community Discord & GitHub Discussions</span>
+              </li>
+            </ul>
+            <a href="https://github.com/Mints-ai/SHIELD-DESK" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              Deploy Self-Hosted (GitHub)
+            </a>
+          </div>
+
+          <!-- Professional Tier -->
+          <div class="pricing-card popular">
+            <span class="popular-badge">Most Popular</span>
+            <h3 class="pricing-tier-name">Professional</h3>
+            <p class="pricing-tier-desc">Cloud-managed platform for growing security teams and mid-market enterprises.</p>
+            <div class="pricing-price-box">
+              <span class="price-currency">$</span>
+              <span class="price-amount" id="proPriceAmount">39</span>
+              <span class="price-period" id="proPricePeriod">/ month (billed annually)</span>
+            </div>
+            <ul class="pricing-features-list">
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Up to <strong>100 Endpoint Agents</strong></span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>AI Blast Radius & Vulnerability ML Model</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>3-Horizon Remediation Task Board</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>RSA-2048 Signed Command Dispatch</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Trivy CVE & Gitleaks Integration</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Priority 4h Email Support</span>
+              </li>
+            </ul>
+            <a href="#simulator" class="btn btn-primary">
+              Start 14-Day Free Pilot
+            </a>
+          </div>
+
+          <!-- Enterprise Tier -->
+          <div class="pricing-card">
+            <h3 class="pricing-tier-name">Enterprise</h3>
+            <p class="pricing-tier-desc">Air-gapped dual-custody governance for defense, financial, and healthcare infrastructure.</p>
+            <div class="pricing-price-box">
+              <span class="price-amount" style="font-size:36px;">Custom</span>
+              <span class="price-period">/ tailored SLA</span>
+            </div>
+            <ul class="pricing-features-list">
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Unlimited Endpoint Agents</strong></span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Strict Separation of Duties & Tier 3 Dual MFA</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Air-Gapped & AWS GovCloud Deployment</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Hardware Security Module (HSM) PKI Keys</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Continuous SOC 2 & Merkle Evidence Vault</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Dedicated Security Architect & 15-min SLA</span>
+              </li>
+            </ul>
+            <a href="mailto:sales@mintsglobal.ae" class="btn btn-secondary">
+              Contact Enterprise Sales
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Mints ERP Diamond Hairline Divider -->
+    <div class="diamond-divider">
+      <div class="gold-hairline"></div>
+      <div class="diamond-icon"></div>
+      <div class="gold-hairline"></div>
+    </div>
+
+    <!-- ===================================================================
+         FREQUENTLY ASKED QUESTIONS (FAQ)
+         =================================================================== -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-eyebrow">Enterprise Questions</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-desc">
+            Everything you need to know about ShieldDesk deployment, agent architecture, and cryptographic governance.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          
+          <div class="faq-item open">
+            <button class="faq-question">
+              <span>What is the "Prove Before You Act" invariant?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              Most SOAR tools blindly execute remediation scripts that can take down critical database servers or core routers. In ShieldDesk, no destructive or containment action ever dispatches to an endpoint without: (1) an AI simulated blast radius calculation, (2) cryptographic validation of the operator's autonomy tier, (3) dual-custody hardware MFA sign-off when applicable, and (4) an automated pre-flight snapshot with rollback capability.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Can ShieldDesk run in completely air-gapped environments?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              Yes. ShieldDesk is packaged as lightweight containerized images with PostgreSQL 16+ and a localized Python Vulnerability ML Engine on port 8000. It requires zero outbound internet access and supports internal offline YARA rule compilation and on-premises mTLS X.509 PKI certificate authorities.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How does the agent daemon ensure zero performance overhead?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              The universal agent is written in pure Go with zero external runtime dependencies. It operates with under 15 MB of memory footprint and consumes less than 0.1% CPU during idle heartbeats. It only wakes up when receiving cryptographically signed commands over mutual TLS.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What happens if an endpoint agent loses connectivity during containment?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              ShieldDesk implements fail-safe rollback logic. If an agent fails to confirm receipt and pre-flight snapshot generation within the cryptographic TTL window, the mitigation task automatically reverts from <code>in_progress</code> back to <code>approved</code>, preventing zombie execution states and alerting administrators.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How does ShieldDesk enforce Separation of Duties (SoD)?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              Separation of duties is enforced at both the API layer and the relational database schema level. In <code>db/schema.sql</code>, database constraints prevent an administrator from self-approving Tier 3 break-glass requests, requiring two distinct SuperAdmins. Meanwhile, SOC Analysts have zero write or execution permissions, acting as read-only viewers.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         BOTTOM CTA BANNER (Mints ERP Ambient Glow)
+         =================================================================== -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-banner">
+          <div class="cta-banner-glow"></div>
+          <h2 class="cta-title">Ready to Replace Alert Fatigue with Cryptographic Proof?</h2>
+          <p class="cta-subtitle">
+            Deploy the ShieldDesk control plane in minutes. Protect your endpoints with multi-cloud telemetry, blast radius simulations, and zero-drift remediation.
+          </p>
+          <div class="cta-buttons">
+            <a href="#simulator" class="btn btn-primary btn-lg">
+              Request a Live Demo
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+            <a href="https://github.com/Mints-ai/SHIELD-DESK" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg">
+              View Source on GitHub ★
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================================================================
+       FOOTER (Chatwoot Structure + Mints Global Brand)
+       =================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      
+      <div class="footer-top">
+        
+        <!-- Brand Col -->
+        <div class="footer-brand footer-col-brand">
+          <a href="#" class="brand-logo">
+            <div class="brand-icon-wrapper">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <div class="brand-name">
+              <span>ShieldDesk</span><span class="brand-tm">™</span>
+            </div>
+          </a>
+          <p>
+            Evidence-driven security operations and remediation platform engineered by Mints Global.
+          </p>
+          <div class="footer-status-pill">
+            <span class="pulse-dot"></span>
+            <span>All Systems Operational &bull; 99.99% Uptime</span>
+          </div>
+        </div>
+
+        <!-- Product Col -->
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul class="footer-links">
+            <li><a href="#showcase">SOC Workspace</a></li>
+            <li><a href="#showcase">Executive Scorecard</a></li>
+            <li><a href="#showcase">Fleet & PKI Authority</a></li>
+            <li><a href="#showcase">3-Horizon Remediation</a></li>
+            <li><a href="#showcase">Native YARA Engine</a></li>
+            <li><a href="#showcase">Compliance Audit Vault</a></li>
+          </ul>
+        </div>
+
+        <!-- Architecture Col -->
+        <div class="footer-col">
+          <h4>Architecture</h4>
+          <ul class="footer-links">
+            <li><a href="#governance">Autonomy Hierarchy</a></li>
+            <li><a href="#governance">Separation of Duties</a></li>
+            <li><a href="#features">Secret Scrubbing</a></li>
+            <li><a href="#features">Blast Radius Engine</a></li>
+            <li><a href="#features">mTLS Command Signing</a></li>
+            <li><a href="#features">Merkle Hash Ledger</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources Col -->
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="https://github.com/Mints-ai/SHIELD-DESK/blob/main/README.md" target="_blank" rel="noopener noreferrer">Documentation</a></li>
+            <li><a href="https://github.com/Mints-ai/SHIELD-DESK" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
+            <li><a href="https://github.com/Mints-ai/SHIELD-DESK/releases" target="_blank" rel="noopener noreferrer">Release Notes</a></li>
+            <li><a href="#simulator">Interactive Sandbox</a></li>
+            <li><a href="#pricing">Pricing Plans</a></li>
+            <li><a href="#faq">Enterprise FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Company Col -->
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="https://mintsglobal.ae" target="_blank" rel="noopener noreferrer">Mints Global</a></li>
+            <li><a href="https://erp.mintsglobal.ae" target="_blank" rel="noopener noreferrer">Mints ERP</a></li>
+            <li><a href="mailto:security@mintsglobal.ae">Security Advisory</a></li>
+            <li><a href="mailto:sales@mintsglobal.ae">Contact Sales</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Mints Global IT & Advertisement LLC. All rights reserved. ShieldDesk™ is a trademark of Mints Global.
+        </div>
+        <div style="display:flex; gap:20px;">
+          <a href="#">SOC 2 Type II</a>
+          <a href="#">ISO 27001:2022</a>
+          <a href="#">NIST CSF 2.0</a>
+          <a href="#">HIPAA Security</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ===================================================================
+       LIGHTBOX ZOOM MODAL
+       =================================================================== -->
+  <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-label="Screenshot zoom view">
+    <div class="lightbox-content">
+      <button class="lightbox-close-btn" id="lightboxCloseBtn" aria-label="Close dialog">&times;</button>
+      <img src="assets/screenshots/soc-incident-workspace.png" alt="Zoomed Screenshot" class="lightbox-img" id="lightboxImg">
+    </div>
+  </div>
+
+  <!-- Main JavaScript Logic -->
+  <script src="script.js"></script>
+</body>
+</html>
