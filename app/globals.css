@@ -181,6 +181,18 @@ body::after {
   filter: blur(55px);
 }
 
+/* Atmospheric Top Dissolve Vignette */
+.top-scroll-vignette {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28px;
+  background: linear-gradient(180deg, #07100D 0%, rgba(7, 16, 13, 0.82) 65%, transparent 100%);
+  pointer-events: none;
+  z-index: 999;
+}
+
 /* Container */
 .container {
   width: 100%;
@@ -284,25 +296,32 @@ body::after {
    LIQUID GLASS FLOATING NAVBAR (Dynamic Island / VisionOS Optics)
    Strict Palette: Deep Emerald #0B6B50 | Near-Black #07100D | Champagne Gold #D8C49A
    =================================================================== */
-.navbar {
+.navbar-wrapper {
   position: sticky;
-  top: 14px;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 12px 0 6px 0;
+  background: linear-gradient(180deg, #07100D 0%, #07100D 60%, rgba(7, 16, 13, 0.6) 85%, transparent 100%);
+  pointer-events: none;
+}
+
+.navbar {
+  pointer-events: auto;
+  position: relative;
   width: min(1260px, calc(100% - 32px));
-  margin: 10px auto 0 auto;
+  margin: 0 auto;
   height: 60px;
-  background: rgba(7, 16, 13, 0.72);
-  backdrop-filter: blur(28px) saturate(210%);
-  -webkit-backdrop-filter: blur(28px) saturate(210%);
-  border: 1px solid rgba(216, 196, 154, 0.2);
-  border-top: 1px solid rgba(255, 255, 255, 0.32);
-  border-bottom: 1px solid rgba(11, 107, 80, 0.42);
+  background: #08120e;
+  border: 1px solid rgba(216, 196, 154, 0.24);
+  border-top: 1px solid rgba(255, 255, 255, 0.38);
+  border-bottom: 1px solid rgba(11, 107, 80, 0.5);
   border-radius: var(--radius-full);
   box-shadow: 
-    0 20px 48px -12px rgba(0, 0, 0, 0.85),
-    0 0 24px -4px rgba(11, 107, 80, 0.22),
-    inset 0 1px 1px 0 rgba(255, 255, 255, 0.32),
-    inset 0 -1px 2px 0 rgba(0, 0, 0, 0.6);
-  z-index: 1000;
+    0 24px 50px -10px rgba(0, 0, 0, 0.95),
+    0 0 28px -4px rgba(11, 107, 80, 0.32),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.38),
+    inset 0 -1px 2px 0 rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
   padding: 0 6px;
@@ -2708,9 +2727,11 @@ input:checked + .slider-toggle:before {
 
 /* Mobile Nav Menu Drawer (Liquid Glass Sheet) */
 @media (max-width: 860px) {
+  .navbar-wrapper {
+    padding: 8px 0 4px 0;
+  }
   .navbar {
     width: calc(100% - 20px);
-    top: 10px;
     height: 56px;
     border-radius: var(--radius-full);
     padding: 0 4px;

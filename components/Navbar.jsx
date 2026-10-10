@@ -6,8 +6,9 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="navbar" id="navbar">
-      <div className="container nav-container">
+    <div className="navbar-wrapper">
+      <header className="navbar" id="navbar">
+        <div className="container nav-container">
         
         {/* Brand Logo */}
         <a href="#" className="brand-logo" aria-label="ShieldDesk Home">
@@ -116,5 +117,6 @@ export default function Navbar() {
 
       </div>
     </header>
+    </div>
   );
 }

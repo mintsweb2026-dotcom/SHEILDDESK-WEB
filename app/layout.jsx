@@ -32,6 +32,7 @@ export default function RootLayout({ children }) {
       <body>
         <div className="bg-grid-overlay"></div>
         <div className="ambient-glow"></div>
+        <div className="top-scroll-vignette" aria-hidden="true"></div>
         {children}
       </body>
     </html>
