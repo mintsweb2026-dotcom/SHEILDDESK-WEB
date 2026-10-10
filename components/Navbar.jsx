@@ -12,10 +12,7 @@ export default function Navbar() {
         {/* Brand Logo */}
         <a href="#" className="brand-logo" aria-label="ShieldDesk Home">
           <div className="brand-icon-wrapper">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-              <path d="M9 12l2 2 4-4" strokeWidth="2.5"/>
-            </svg>
+            <img src="/logo-icon.png" alt="ShieldDesk Shield" className="brand-icon-img" width="34" height="34" />
           </div>
           <div className="brand-name">
             <span>ShieldDesk</span><span className="brand-tm">™</span>

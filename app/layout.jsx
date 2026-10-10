@@ -5,10 +5,15 @@ export const metadata = {
   title: 'ShieldDesk™ — See Risk. Act With Confidence. | Enterprise Security Operations',
   description: 'See Risk. Act With Confidence. ShieldDesk is an evidence-driven security operations and remediation control plane engineered around the unyielding invariant: PROVE BEFORE YOU ACT. Ingest multi-cloud telemetry, model attack blast radius, enforce cryptographic dual-custody governance, and dispatch signed endpoint containment with automated rollback.',
   keywords: ['ShieldDesk', 'See Risk Act With Confidence', 'Mints AI', 'SOC', 'Security Operations', 'SOAR', 'Cybersecurity', 'Trivy', 'YARA', 'Next.js 16', 'SSR'],
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.png',
+    apple: '/logo-icon.png',
+  },
   openGraph: {
     title: 'ShieldDesk™ — See Risk. Act With Confidence.',
     description: 'See Risk. Act With Confidence. Autonomous multi-cloud security telemetry correlation, AI blast radius modeling, dual-custody separation of duties, and RSA-2048 signed fleet dispatch.',
-    images: ['/assets/screenshots/soc-incident-workspace.png'],
+    images: ['/logo.png'],
     type: 'website'
   }
 };
