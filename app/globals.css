@@ -6,14 +6,14 @@
    =================================================================== */
 
 :root {
-  /* Core Backgrounds: Near-black #07100D Palette */
+  /* Core Backgrounds: Near-black #07100D Palette (from SHIELD-DESK UI) */
   --bg-primary: #07100D;
-  --bg-secondary: #0c1813;
-  --bg-tertiary: #11221b;
-  --bg-card: rgba(12, 24, 19, 0.88);
-  --bg-card-hover: rgba(17, 34, 27, 0.95);
-  --bg-elevated: #162c23;
-  --bg-glass: rgba(7, 16, 13, 0.95);
+  --bg-secondary: #0a1510;
+  --bg-tertiary: #0e1c16;
+  --bg-card: rgba(10, 20, 16, 0.78);
+  --bg-card-hover: rgba(14, 28, 22, 0.92);
+  --bg-elevated: #13261e;
+  --bg-glass: rgba(7, 16, 13, 0.88);
 
   /* Primary: Deep Emerald #0B6B50 */
   --color-primary: #0B6B50;
@@ -37,11 +37,11 @@
   --accent-cyan-glow: rgba(11, 107, 80, 0.32);
 
   /* Borders & Hairlines */
-  --border-subtle: rgba(216, 196, 154, 0.16);
-  --border-focus: rgba(216, 196, 154, 0.38);
+  --border-subtle: rgba(216, 196, 154, 0.15);
+  --border-focus: rgba(216, 196, 154, 0.35);
   --border-active: #D8C49A;
-  --hairline-color: rgba(216, 196, 154, 0.22);
-  --border-emerald: rgba(11, 107, 80, 0.32);
+  --hairline-color: rgba(216, 196, 154, 0.2);
+  --border-emerald: rgba(11, 107, 80, 0.35);
 
   /* Typography Colors */
   --text-primary: #f2f7f4;
@@ -65,9 +65,9 @@
   --gradient-card: linear-gradient(180deg, rgba(11, 107, 80, 0.08) 0%, rgba(7, 16, 13, 0.02) 100%);
   --gradient-glow: radial-gradient(circle at 50% 0%, rgba(11, 107, 80, 0.28) 0%, rgba(216, 196, 154, 0.08) 45%, transparent 70%);
 
-  /* Modern Geometric Sans-Serif Typography Hierarchy */
+  /* Modern Geometric Cyber Typography Hierarchy (Orbitron Headings from SHIELD-DESK UI) */
   --font-sans: 'Sora', sans-serif;
-  --font-heading: 'Space Grotesk', 'Sora', sans-serif;
+  --font-heading: 'Orbitron', 'Space Grotesk', sans-serif;
   --font-display: 'Orbitron', 'Space Grotesk', sans-serif;
   --font-mono: 'JetBrains Mono', SFMono-Regular, Menlo, monospace;
 
@@ -1145,55 +1145,61 @@ body::after {
   }
 }
 
-/* Top Tab Bar */
+/* Top Tab Bar (Matching SHIELD-DESK Module Chips) */
 .showcase-tab-bar {
   display: flex;
   align-items: center;
-  background: var(--bg-tertiary);
-  border-bottom: 1px solid var(--border-subtle);
+  justify-content: center;
+  background: rgba(8, 17, 13, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(216, 196, 154, 0.15);
+  padding: 12px 16px;
+  gap: 8px;
   overflow-x: auto;
-  padding: 8px 12px 0 12px;
-  gap: 6px;
-  scrollbar-width: thin;
+  scrollbar-width: none;
+  flex-wrap: wrap;
 }
 
 .showcase-tab-btn {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 16px;
-  background: transparent;
-  border: none;
-  border-bottom: 2px solid transparent;
+  padding: 8px 16px;
+  background: rgba(14, 28, 22, 0.6);
+  border: 1px solid rgba(216, 196, 154, 0.16);
+  border-radius: var(--radius-full);
   color: var(--text-secondary);
-  font-size: 13px;
+  font-size: 12.5px;
   font-weight: 700;
   cursor: pointer;
   white-space: nowrap;
   transition: all var(--transition-fast);
-  border-top-left-radius: var(--radius-sm);
-  border-top-right-radius: var(--radius-sm);
 }
 
 .showcase-tab-btn:hover {
-  color: var(--accent-gold-bright);
-  background: var(--accent-gold-bg);
+  background: rgba(20, 38, 30, 0.85);
+  color: #ffffff;
+  border-color: rgba(216, 196, 154, 0.35);
+  transform: translateY(-1px);
 }
 
 .showcase-tab-btn.active {
-  color: var(--accent-gold-bright);
-  background: var(--bg-secondary);
-  border-bottom-color: var(--accent-gold-bright);
+  background: linear-gradient(135deg, #0e8563 0%, #0B6B50 100%);
+  color: #ffffff;
+  border-color: rgba(16, 185, 129, 0.6);
+  box-shadow: 0 0 20px rgba(11, 107, 80, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.35);
+  transform: translateY(-1px);
 }
 
-/* Showcase Window Header */
+/* Showcase Window Header (Command Bar frame from screenshot) */
 .showcase-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 12px 20px;
-  background: var(--bg-secondary);
-  border-bottom: 1px solid var(--border-subtle);
+  background: rgba(7, 15, 12, 0.9);
+  border-bottom: 1px solid rgba(216, 196, 154, 0.12);
   font-size: 12px;
 }
 
@@ -1209,16 +1215,16 @@ body::after {
 }
 .window-dot.red { background-color: #fb7185; }
 .window-dot.yellow { background-color: #f59e0b; }
-.window-dot.green { background-color: var(--accent-gold); }
+.window-dot.green { background-color: #10b981; }
 
 .window-address {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: var(--bg-tertiary);
-  padding: 4px 14px;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border-subtle);
+  background: rgba(10, 20, 16, 0.85);
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   color: var(--text-secondary);
   font-family: var(--font-mono);
   font-size: 11px;
@@ -1236,12 +1242,15 @@ body::after {
 
 .window-action-badge {
   font-size: 11px;
-  padding: 3px 10px;
+  padding: 4px 12px;
   border-radius: var(--radius-full);
-  background: var(--accent-gold-bg);
-  color: var(--accent-gold-bright);
-  border: 1px solid var(--border-focus);
+  background: rgba(11, 107, 80, 0.2);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.35);
   font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 /* Showcase Content Body */
@@ -1375,11 +1384,12 @@ body::after {
   gap: 14px;
   padding: 16px 20px;
   border-radius: var(--radius-lg);
-  background: rgba(7, 16, 13, 0.68);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(216, 196, 154, 0.18);
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.28);
+  background: rgba(10, 20, 16, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(216, 196, 154, 0.16);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.05);
   transition: all var(--transition-base);
   cursor: default;
 }
@@ -1387,9 +1397,10 @@ body::after {
 .partner-logo-item:hover {
   color: var(--text-primary);
   border-color: rgba(216, 196, 154, 0.48);
-  background: rgba(17, 24, 39, 0.88);
+  border-top-color: rgba(255, 255, 255, 0.25);
+  background: rgba(14, 28, 22, 0.92);
   transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45), 0 0 16px rgba(11, 107, 80, 0.18);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(11, 107, 80, 0.28);
 }
 
 .partner-logo-item svg {
@@ -1730,20 +1741,24 @@ body::after {
 
 .feature-card {
   background: var(--bg-card);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--border-subtle);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-lg);
   padding: 32px 28px;
   position: relative;
   transition: all var(--transition-base);
   display: flex;
   flex-direction: column;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.75), inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .feature-card:hover {
-  border-color: var(--border-active);
+  border-color: var(--border-focus);
+  border-top-color: rgba(255, 255, 255, 0.28);
   transform: translateY(-3px);
-  box-shadow: var(--shadow-xl);
+  box-shadow: 0 20px 48px -10px rgba(0, 0, 0, 0.9), 0 0 24px rgba(11, 107, 80, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
 
 .feature-icon-wrapper {
